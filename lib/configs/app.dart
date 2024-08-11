@@ -3,6 +3,7 @@ import 'package:folio/configs/configs.dart';
 
 class App {
   static bool? isLtr;
+
   static bool showAds = false;
 
   static init(BuildContext context) {

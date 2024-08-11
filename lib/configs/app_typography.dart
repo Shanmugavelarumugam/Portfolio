@@ -21,6 +21,7 @@ class AppText {
   // Label
   static TextStyle? l1;
   static TextStyle? l1b;
+
   static TextStyle? l2;
   static TextStyle? l2b;
 

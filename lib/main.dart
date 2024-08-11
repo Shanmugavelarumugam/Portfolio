@@ -6,6 +6,7 @@ import 'package:folio/sections/main/main_section.dart';
 import 'package:provider/provider.dart';
 import 'package:url_strategy/url_strategy.dart';
 import 'package:folio/configs/core_theme.dart' as theme;
+// Import the custom carousel widget
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -62,7 +63,7 @@ class _MaterialChildState extends State<MaterialChild> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Hamza',
+      title: 'Shanmugavel A',
       theme: theme.themeLight,
       darkTheme: theme.themeDark,
       themeMode: widget.provider.themeMode,

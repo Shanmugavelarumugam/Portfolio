@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:folio/configs/app_typography.dart';
 
 class CustomSectionHeading extends StatelessWidget {

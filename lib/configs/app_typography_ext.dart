@@ -25,6 +25,7 @@ extension SuperTextStyles on TextStyle {
     if (i == 3) {
       w = FontWeight.w300;
     }
+
     if (i == 5) {
       w = FontWeight.w500;
     }

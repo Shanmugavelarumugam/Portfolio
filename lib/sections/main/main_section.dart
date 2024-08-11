@@ -1,6 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:folio/animations/entrance_fader.dart';
 import 'package:folio/configs/app.dart';
 import 'package:folio/configs/configs.dart';
+import 'package:folio/custom_carousel.dart';
 import 'package:folio/provider/app_provider.dart';
 import 'package:folio/provider/drawer_provider.dart';
 import 'package:folio/provider/scroll_provider.dart';
@@ -10,11 +12,10 @@ import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/navbar_actions_button.dart';
 import 'package:folio/widget/navbar_logo.dart';
 import 'package:provider/provider.dart';
-
 import 'package:universal_html/html.dart' as html;
-import 'package:flutter/material.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/widget/arrow_on_top.dart';
+import 'custom_carousel.dart'; // Import the custom carousel widget
 
 part 'widgets/_navbar_desktop.dart';
 part 'widgets/_mobile_drawer.dart';
@@ -45,6 +46,7 @@ class _MainPageState extends State<MainPage> {
             Responsive.isTablet(context) || Responsive.isMobile(context)
                 ? const _NavBarTablet()
                 : const _NavbarDesktop(),
+            // Use the custom carousel here
           ],
         ),
       ),

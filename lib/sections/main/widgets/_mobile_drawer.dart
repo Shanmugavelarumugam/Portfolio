@@ -5,12 +5,11 @@ class _MobileDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final appProvider = Provider.of<AppProvider>(context);
     final scrollProvider = Provider.of<ScrollProvider>(context);
 
     return Drawer(
       child: Material(
-        color: appProvider.isDark ? Colors.grey[900] : Colors.white,
+        color: Colors.white,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 25.0, 0, 0),
           child: Column(
@@ -18,25 +17,6 @@ class _MobileDrawer extends StatelessWidget {
             children: [
               const Center(
                 child: NavBarLogo(),
-              ),
-              const Divider(),
-              ListTile(
-                leading: Icon(
-                  Icons.light_mode,
-                  color: AppTheme.c!.primary!,
-                ),
-                title: const Text(
-                  "Dark Mode",
-                ),
-                trailing: Switch(
-                  inactiveTrackColor: Colors.grey,
-                  value: appProvider.isDark,
-                  onChanged: (value) {
-                    appProvider
-                        .setTheme(value ? ThemeMode.dark : ThemeMode.light);
-                  },
-                  activeColor: AppTheme.c!.primary,
-                ),
               ),
               const Divider(),
               ...NavBarUtils.names.asMap().entries.map(

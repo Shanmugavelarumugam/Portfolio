@@ -32,15 +32,9 @@ class _ServiceCardState extends State<_ServiceCard> {
         cardKey.currentState!.toggleCard();
       },
       onHover: (isHovering) {
-        if (isHovering) {
-          setState(() {
-            isHover = true;
-          });
-        } else {
-          setState(() {
-            isHover = false;
-          });
-        }
+        setState(() {
+          isHover = isHovering;
+        });
       },
       child: FlipCard(
         flipOnTouch: kIsWeb ? false : true,
@@ -52,21 +46,15 @@ class _ServiceCardState extends State<_ServiceCard> {
           decoration: BoxDecoration(
             color: appProvider.isDark ? Colors.grey[900] : Colors.white,
             borderRadius: BorderRadius.circular(15),
-            boxShadow: isHover
-                ? [
-                    BoxShadow(
-                      color: AppTheme.c!.primary!.withAlpha(100),
-                      blurRadius: 12.0,
-                      offset: const Offset(0.0, 0.0),
-                    )
-                  ]
-                : [
-                    BoxShadow(
-                      color: Colors.black.withAlpha(100),
-                      blurRadius: 12.0,
-                      offset: const Offset(0.0, 0.0),
-                    )
-                  ],
+            boxShadow: [
+              BoxShadow(
+                color: isHover
+                    ? AppTheme.c!.primary!.withAlpha(100)
+                    : Colors.black.withAlpha(100),
+                blurRadius: 12.0,
+                offset: const Offset(0.0, 0.0),
+              ),
+            ],
           ),
           child: _ServiceCardBackWidget(
             serviceDesc: widget.serviceDescription,
@@ -80,21 +68,15 @@ class _ServiceCardState extends State<_ServiceCard> {
           decoration: BoxDecoration(
             color: appProvider.isDark ? Colors.grey[900] : Colors.white,
             borderRadius: BorderRadius.circular(15),
-            boxShadow: isHover
-                ? [
-                    BoxShadow(
-                      color: AppTheme.c!.primary!.withAlpha(100),
-                      blurRadius: 12.0,
-                      offset: const Offset(0.0, 0.0),
-                    )
-                  ]
-                : [
-                    BoxShadow(
-                      color: Colors.black.withAlpha(100),
-                      blurRadius: 12.0,
-                      offset: const Offset(0.0, 0.0),
-                    )
-                  ],
+            boxShadow: [
+              BoxShadow(
+                color: isHover
+                    ? AppTheme.c!.primary!.withAlpha(100)
+                    : Colors.black.withAlpha(100),
+                blurRadius: 12.0,
+                offset: const Offset(0.0, 0.0),
+              ),
+            ],
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -102,10 +84,6 @@ class _ServiceCardState extends State<_ServiceCard> {
               Image.asset(
                 widget.serviceIcon,
                 height: AppDimensions.normalize(30),
-                color: widget.serviceIcon.contains(StaticUtils.openSource) &&
-                        !appProvider.isDark
-                    ? Colors.black
-                    : null,
               ),
               Space.y1!,
               Text(

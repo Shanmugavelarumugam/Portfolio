@@ -10,15 +10,18 @@ class AppCoreTheme {
   Color? accentDark;
 
   Color? background;
+
   Color? backgroundSub;
   Color? scaffold;
   Color? scaffoldDark;
 
   Color? text;
+
   Color? textSub;
   Color? textSub2;
 
   Color? shadow; // Normal shadowOnBackground
+
   Color? shadowSub; // Shadow light
 
   AppCoreTheme({

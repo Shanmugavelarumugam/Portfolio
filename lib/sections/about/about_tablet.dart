@@ -1,15 +1,13 @@
+import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/utils/about_utils.dart';
 import 'package:folio/utils/utils.dart';
 import 'package:folio/utils/work_utils.dart';
-
 import 'package:folio/widget/custom_text_heading.dart';
 import 'package:universal_html/html.dart' as html;
-import 'package:flutter/material.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/widget/about_me_data.dart';
 import 'package:folio/widget/community_button.dart';
-import 'package:folio/widget/tech_widget.dart';
 
 class AboutTab extends StatelessWidget {
   const AboutTab({Key? key}) : super(key: key);
@@ -20,78 +18,107 @@ class AboutTab extends StatelessWidget {
     double width = MediaQuery.of(context).size.width;
 
     return Container(
-      padding: Space.h,
+      padding: EdgeInsets.all(AppDimensions.normalize(16)),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.blue.shade300,
+            Colors.purple.shade400,
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const Center(
-            child: CustomSectionHeading(
-              text: '\nAbout Me',
+          const CustomSectionHeading(
+            text: '\nAbout Me',
+          ),
+          const CustomSectionSubHeading(
+            text: 'Get to know me :)',
+          ),
+          SizedBox(height: height * 0.02),
+          ClipRRect(
+            borderRadius: BorderRadius.circular(20.0),
+            child: Image.asset(
+              StaticUtils.mobilePhoto,
+              height: height * 0.27,
+              fit: BoxFit.cover,
             ),
           ),
-          const Center(
-            child: CustomSectionSubHeading(
-              text: 'Get to know me :)',
-            ),
-          ),
-          Space.y1!,
-          Image.asset(
-            StaticUtils.mobilePhoto,
-            height: height * 0.27,
-          ),
-          SizedBox(
-            height: height * 0.03,
-          ),
+          SizedBox(height: height * 0.03),
           Text(
             "Who am I?",
             style: AppText.b2!.copyWith(
-              color: AppTheme.c!.primary,
+              color: Colors.white,
+              fontSize: AppDimensions.normalize(6),
             ),
+            textAlign: TextAlign.center,
           ),
-          Space.y1!,
+          SizedBox(height: height * 0.02),
           Text(
             AboutUtils.aboutMeHeadline,
             style: AppText.b2b!.copyWith(
               fontFamily: 'Montserrat',
+              fontSize: AppDimensions.normalize(5),
+              color: Colors.white,
             ),
+            textAlign: TextAlign.center,
           ),
-          SizedBox(
-            height: height * 0.02,
-          ),
+          SizedBox(height: height * 0.02),
           Text(
             AboutUtils.aboutMeDetail,
             style: AppText.l1!.copyWith(
               height: 2,
               letterSpacing: 1.1,
               fontFamily: 'Montserrat',
+              fontSize: AppDimensions.normalize(4.5),
+              color: Colors.white,
             ),
+            textAlign: TextAlign.center,
           ),
-          Space.y!,
+          SizedBox(height: height * 0.03),
           Divider(
             color: Colors.grey[800],
             thickness: AppDimensions.normalize(0.5),
           ),
-          Space.y!,
+          SizedBox(height: height * 0.03),
           Text(
-            'Technologies I have worked with:',
+            'Experience',
             style: AppText.l1!.copyWith(
-              color: AppTheme.c!.primary,
+              color: Colors.white,
+              fontSize: AppDimensions.normalize(6),
             ),
+            textAlign: TextAlign.center,
           ),
-          Row(
-            children: kTools
-                .map(
-                  (e) => ToolTechWidget(techName: e),
-                )
-                .toList(),
+          SizedBox(height: height * 0.02),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              _buildExperienceItem(
+                icon: Icons.star,
+                text:
+                    'Flutter Developer Internship at MDQuality Apps Solutions',
+              ),
+              _buildExperienceItem(
+                icon: Icons.star,
+                text: 'Mobile App Developer Internship at Introvertish',
+              ),
+              _buildExperienceItem(
+                icon: Icons.star,
+                text: 'Flutter Frontend Developer Internship at InternCareer',
+              ),
+            ],
           ),
-          Space.y!,
+          SizedBox(height: height * 0.03),
           Divider(
             color: Colors.grey[800],
             thickness: AppDimensions.normalize(0.5),
           ),
-          Space.y!,
+          SizedBox(height: height * 0.03),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -124,48 +151,71 @@ class AboutTab extends StatelessWidget {
               ),
             ],
           ),
-          Space.y1!,
+          SizedBox(height: height * 0.03),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
                 height: AppDimensions.normalize(13),
                 width: AppDimensions.normalize(40),
                 child: OutlinedButton(
                   onPressed: () => html.window.open(StaticUtils.resume, 'pdf'),
-                  child: const Text(
-                    "Resume",
-                  ),
+                  child: const Text("Resume"),
                 ),
               ),
-              Space.x!,
-              Container(
-                width: width * 0.05,
-                decoration: BoxDecoration(
-                  border: Border(
-                    bottom: BorderSide(
-                      color: Colors.grey[900]!,
-                      width: 2.0,
-                    ),
-                  ),
-                ),
-              ),
+              SizedBox(width: AppDimensions.normalize(10)),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
-                    children: WorkUtils.logos
-                        .asMap()
-                        .entries
-                        .map(
-                          (e) => CommunityIconBtn(
+                  children: WorkUtils.logos
+                      .asMap()
+                      .entries
+                      .map(
+                        (e) => Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: CommunityIconBtn(
                             icon: e.value,
                             link: WorkUtils.communityLinks[e.key],
                             height: WorkUtils.communityLogoHeight[e.key],
                           ),
-                        )
-                        .toList()),
+                        ),
+                      )
+                      .toList(),
+                ),
               ),
             ],
-          )
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildExperienceItem({required IconData icon, required String text}) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Icon(
+            icon,
+            size: AppDimensions.normalize(6),
+            color: Colors.white,
+          ),
+          SizedBox(width: AppDimensions.normalize(6)),
+          Expanded(
+            child: Text(
+              text,
+              style: AppText.b2!.copyWith(
+                height: 1.5,
+                letterSpacing: 1.1,
+                fontFamily: 'Montserrat',
+                fontSize: AppDimensions.normalize(5),
+                color: Colors.white,
+              ),
+              textAlign: TextAlign.center,
+            ),
+          ),
         ],
       ),
     );

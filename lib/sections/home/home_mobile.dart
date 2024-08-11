@@ -1,7 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
-
 import 'package:folio/utils/utils.dart';
 import 'package:folio/widget/social_links.dart';
 
@@ -12,8 +11,18 @@ class HomeMobile extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return SizedBox(
+    return Container(
       height: size.height * 1.02,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.blue.shade300,
+            Colors.purple.shade400,
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
       child: Stack(
         children: [
           Positioned(
@@ -41,7 +50,7 @@ class HomeMobile extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Text(
-                      "HEY THERE! ",
+                      "WELCOME TO MY PORTFOLIO!",
                       style: AppText.b2!.copyWith(
                         fontFamily: 'Montserrat',
                       ),
@@ -55,15 +64,9 @@ class HomeMobile extends StatelessWidget {
                 ),
                 Space.y!,
                 Text(
-                  "Muhammad",
-                  style: AppText.h3!.copyWith(
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.w100,
-                  ),
-                ),
-                Text(
-                  "Hamza",
+                  "Shanmugavel A",
                   style: AppText.h3b!.copyWith(
+                    fontFamily: 'Montserrat',
                     height: 1,
                   ),
                 ),
@@ -82,7 +85,7 @@ class HomeMobile extends StatelessWidget {
                           textStyle: AppText.b1,
                         ),
                         TyperAnimatedText(
-                          ' UI/UX Enthusiast',
+                          ' Mobile App Developer',
                           speed: const Duration(milliseconds: 50),
                           textStyle: AppText.b1,
                         ),
@@ -92,8 +95,8 @@ class HomeMobile extends StatelessWidget {
                           textStyle: AppText.b1,
                         ),
                       ],
-                      repeatForever: true,
                       isRepeatingAnimation: true,
+                      repeatForever: true,
                     ),
                   ],
                 ),

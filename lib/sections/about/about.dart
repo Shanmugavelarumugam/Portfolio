@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:folio/responsive/responsive.dart';
 import 'package:folio/sections/about/about_desktop.dart';
+
 import 'package:folio/sections/about/about_mobile.dart';
 import 'package:folio/sections/about/about_tablet.dart';
 

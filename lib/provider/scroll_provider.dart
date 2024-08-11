@@ -2,28 +2,26 @@ import 'package:flutter/cupertino.dart';
 import 'package:folio/configs/app_dimensions.dart';
 
 class ScrollProvider extends ChangeNotifier {
-  final scrollController = ScrollController();
+  final ScrollController scrollController = ScrollController();
 
   ScrollController get controller => scrollController;
 
-  scroll(int index) {
+  void scroll(int index) {
     double offset = index == 1
-        ? 270
+        ? 307
         : index == 2
-            ? 255
+            ? 307
             : index == 3
-                ? 250
-                : 245;
-    controller.animateTo(
-      AppDimensions.normalize(
-        offset * index.toDouble(),
-      ),
+                ? 315
+                : 350;
+    scrollController.animateTo(
+      AppDimensions.normalize(offset * index.toDouble()),
       duration: const Duration(seconds: 1),
       curve: Curves.easeInOut,
     );
   }
 
-  scrollMobile(int index) {
+  void scrollMobile(int index) {
     double offset = index == 1
         ? 290
         : index == 2
@@ -31,10 +29,8 @@ class ScrollProvider extends ChangeNotifier {
             : index == 3
                 ? 300
                 : 310;
-    controller.animateTo(
-      AppDimensions.normalize(
-        offset * index.toDouble(),
-      ),
+    scrollController.animateTo(
+      AppDimensions.normalize(offset * index.toDouble()),
       duration: const Duration(seconds: 1),
       curve: Curves.easeInOut,
     );

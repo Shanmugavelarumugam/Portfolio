@@ -17,13 +17,23 @@ class ServiceDesktopState extends State<ServiceDesktop> {
 
     return Container(
       padding: Space.hf(4),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.blue.shade300,
+            Colors.purple.shade400,
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
       child: Column(
         children: [
           const CustomSectionHeading(
-            text: '\nWhat I can do?',
+            text: '\nSkills',
           ),
           const CustomSectionSubHeading(
-            text: 'I may not be perfect but surely I\'m of some use :)\n\n',
+            text: 'Explore my skills and the areas where I contribute.\n\n',
           ),
           Space.y!,
           Wrap(

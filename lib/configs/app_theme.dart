@@ -29,7 +29,6 @@ class AppTheme {
   );
 
   static AppCoreTheme? c;
-
   // Init
   static init(BuildContext context) {
     c = isDark(context) ? dark : light;

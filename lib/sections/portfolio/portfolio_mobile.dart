@@ -13,48 +13,73 @@ class PortfolioMobileTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    return Column(
-      children: [
-        const CustomSectionHeading(
-          text: "\nPortfolio",
+    return Container(
+      padding: Space.h!,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.blue.shade300,
+            Colors.purple.shade400,
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
-        const CustomSectionSubHeading(
-          text: "Here are few samples of my previous work :)\n\n",
-        ),
-        CarouselSlider.builder(
-          itemCount: ProjectUtils.titles.length,
-          itemBuilder: (BuildContext context, int itemIndex, int i) => Padding(
-            padding: const EdgeInsets.symmetric(vertical: 15.0),
-            child: ProjectCard(
-              projectIcon: ProjectUtils.icons[i],
-              projectLink: ProjectUtils.links[i],
-              projectTitle: ProjectUtils.titles[i],
-              projectDescription: ProjectUtils.description[i],
+      ),
+      child: Column(
+        children: [
+          const CustomSectionHeading(
+            text: "\nPortfolio",
+          ),
+          const CustomSectionSubHeading(
+            text: "Here are few samples of my previous work :)\n\n",
+          ),
+          CarouselSlider.builder(
+            itemCount: ProjectUtils.titles.length,
+            itemBuilder: (BuildContext context, int itemIndex, int i) =>
+                Padding(
+              padding: const EdgeInsets.symmetric(vertical: 15.0),
+              child: ProjectCard(
+                banner:
+                    ProjectUtils.banners[i], // Adding banner for consistency
+                projectIcon: ProjectUtils.icons[i],
+                projectLink: ProjectUtils.links[i],
+                projectTitle: ProjectUtils.titles[i],
+                projectDescription: ProjectUtils.description[i],
+              ),
+            ),
+            options: CarouselOptions(
+              height: height * 0.4,
+              autoPlay: true,
+              autoPlayInterval: const Duration(seconds: 5),
+              enlargeCenterPage: true,
+              autoPlayCurve: Curves.fastOutSlowIn,
+              autoPlayAnimationDuration: const Duration(milliseconds: 800),
+              enableInfiniteScroll: false,
             ),
           ),
-          options: CarouselOptions(
-            height: height * 0.4,
-            autoPlay: true,
-            autoPlayInterval: const Duration(seconds: 5),
-            enlargeCenterPage: true,
-            autoPlayCurve: Curves.fastOutSlowIn,
-            autoPlayAnimationDuration: const Duration(milliseconds: 800),
-            enableInfiniteScroll: false,
-          ),
-        ),
-        Space.y!,
-        SizedBox(
-          height: AppDimensions.normalize(14),
-          width: AppDimensions.normalize(50),
-          child: OutlinedButton(
-            onPressed: () => openURL(StaticUtils.gitHub),
-            child: Text(
-              'See More',
-              style: AppText.l1b,
+          Space.y!,
+          SizedBox(
+            height: AppDimensions.normalize(14),
+            width: AppDimensions.normalize(50),
+            child: OutlinedButton(
+              onPressed: () => openURL(StaticUtils.gitHub),
+              style: OutlinedButton.styleFrom(
+                foregroundColor: Colors.amber,
+                side: BorderSide(
+                  color: Colors.amber, // Border color
+                  width: 2.0, // Border width
+                ),
+              ),
+              child: Text(
+                'See More',
+                style: AppText.l1b?.copyWith(
+                  color: Colors.amber, // Text color
+                ),
+              ),
             ),
-          ),
-        )
-      ],
+          )
+        ],
+      ),
     );
   }
 }

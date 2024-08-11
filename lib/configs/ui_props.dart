@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'app_dimensions.dart';
+
 import 'app_theme.dart';
 
 abstract class UIProps {

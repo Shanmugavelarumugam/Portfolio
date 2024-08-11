@@ -2,26 +2,35 @@ import 'package:folio/utils/utils.dart';
 
 class ServicesUtils {
   static const List<String> servicesIcons = [
-    StaticUtils.appDev,
-    StaticUtils.uiux,
-    StaticUtils.rapid,
-    StaticUtils.blog,
-    StaticUtils.openSource,
+    StaticUtils.flutter,
+    StaticUtils.dart,
+    StaticUtils.figma,
+    StaticUtils.firebase,
+    StaticUtils.andriodStudio,
+    StaticUtils.vscode, // Assuming you have icons for these
+    StaticUtils.git,
+    StaticUtils.github,
   ];
 
   static const List<String> servicesTitles = [
-    "Mobile App Development",
-    "UI/UX Designing",
-    "Rapid Prototyping",
-    "Technical Blog Writing",
-    "Open Source - GitHub",
+    "Flutter",
+    "Dart",
+    "Figma",
+    "Firebase",
+    "Android Studio",
+    "VSCode",
+    "Git",
+    "GitHub",
   ];
 
   static const List<String> servicesDescription = [
-    "Android app development via Flutter\n- Splash Screen\n- Firebase Auth/Cloud\n- REST APIs\n- Maps integration and more...!",
-    "Modern UI/UX Designing\n- Adobe XD\n- Mobile & Web designs\n- Interactive UI designs\n- Responsiveness\n- Promo Videos and more..!",
-    "Rapid Prototype via Flutter\n- Working MVP\n- Quick & Working prototype",
-    "Technical Blog writing\n- Medium blogs\n- Soothing header images\n- SEO friendly\n- Researched topics and more..!",
-    "Open source GitHub Projects\n- Awesome README.md\n- Well documented\n- Header images and more...!",
+    "Cross-platform app development using Flutter\n- Beautiful UIs\n- Fast development\n- High performance\n- Hot reload\n- Comprehensive widget library",
+    "Programming with Dart\n- Modern syntax\n- Strong typing\n- Asynchronous programming\n- Great for Flutter development\n- Strong tooling support",
+    "UI/UX design with Figma\n- Interactive prototypes\n- Collaborative design\n- Vector graphics editor\n- User interface design\n- Cloud-based design tool",
+    "Backend as a Service with Firebase\n- Real-time database\n- Authentication\n- Cloud storage\n- Hosting\n- Analytics",
+    "Android app development with Android Studio\n- Comprehensive IDE\n- Code editor\n- Emulator\n- Code templates\n- Performance profiling",
+    "Code editing with VSCode\n- Lightweight and fast\n- Extensions marketplace\n- Integrated terminal\n- Debugging support\n- Git integration",
+    "Version control with Git\n- Distributed version control system\n- Track changes\n- Branching and merging\n- Collaboration support\n- Efficient workflows",
+    "Source code management with GitHub\n- Repository hosting\n- Collaboration tools\n- Issue tracking\n- Pull requests\n- Continuous integration",
   ];
 }

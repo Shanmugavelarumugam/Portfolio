@@ -1,159 +1,133 @@
 {
-    "name": "Muhammad Hamza",
-    "email": "hamza@mhmz.dev",
+    "name": "Shanmugavel A",
+    "email": "ashanmugavel821@gmail.com",
     "subtitles": [
         "Flutter Developer",
-        "Technical Writer",
-        "UI/UX Designer"
+        "Cross-Platform Mobile App Developer"
     ],
     "blackWhitePhotoURL": "https://drive.google.com/uc?export=view&id=1np1Or8kvpEmH5ghkFN5GJGqU8VAQRUCH",
     "coloredPhotoURL": "https://drive.google.com/uc?export=view&id=1wE4FRqC9bRrzOqS64b48--ykLK1yklTJ",
     "socialLinks": [
         {
             "platform": "facebook",
-            "url": "https://facebook.com/mhmzdev"
+            "url": "https://www.facebook.com/shanmugavel.a.5283?mibextid=ZbWKwL"
         },
         {
             "platform": "instagram",
-            "url": "https://instagram.com/mhmzdev"
-        },
-        {
-            "platform": "twitter",
-            "url": "https://twitter.com/mhmzdev"
+            "url": "https://www.instagram.com/hari_vishal_59?igsh=MXZ0dmljb3djZGN2dg=="
         },
         {
             "platform": "linkedin",
-            "url": "https://linkedin.com/in/mhmzdev"
+            "url": "https://www.linkedin.com/in/shanmugavel45?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
         },
         {
             "platform": "github",
-            "url": "https://github.com/mhmzdev"
-        },
-        {
-            "platform": "medium",
-            "url": "https://mhamzadev.medium.com/"
+            "url": "https://github.com/Shanmugavelarumugam"
         }
     ],
-    "aboutMeHeadline": "I'm Muhammad Hamza, a Flutter developer, Technical Writer and UI/UX Designer.",
-    "aboueMeDetails": "I'm a Final Year Computer Science student enrolled in COMSATS University, Islamabad. I have been developing mobile apps for over 2 years now. I have worked in teams for various startups and helped them in launching their prototypes and got valuable learning experience. I'm a former Google DSC lead and also CEO/Co-Founder Flutter Islamabad, Pakistan.",
-    "technologies": [
-        "Flutter",
-        "Dart",
-        "Python",
-        "Java",
-        "C++",
-        "Flask"
-    ],
-    "services": [
+    "aboutMeHeadline": "I'm Shanmugavel A, a Flutter Developer, Technical Trainer, and Cross-Platform Mobile App Developer.",
+    "aboutMeDetails": "I'm a recent graduate with a degree in Electronics and Communication Engineering from Rajalakshmi Engineering College, Chennai. I have been actively involved in mobile app development, particularly with Flutter, and have completed several internships to hone my skills. My goal is to become a proficient software developer and contribute to innovative projects in the tech industry.",
+    "skills": [
         {
-            "icon": "assets/services/app.png",
-            "name": "Mobile App Development",
-            "description": "Android app development via Flutter\n- Splash Screen\n- Firebase Auth/Cloud\n- REST APIs\n- Maps integration and more...!"
+            "iconUrl": "assets/services/flutter.png",
+            "name": "Flutter",
+            "description": "Cross-platform app development using Flutter\n- Beautiful UIs\n- Fast development\n- High performance\n- Hot reload\n- Comprehensive widget library"
         },
         {
-            "icon": "assets/services/ui.png",
-            "name": "UI/UX Designing",
-            "description": "Modern UI/UX Designing\n- Adobe XD\n- Mobile & Web designs\n- Interactive UI designs\n- Responsiveness\n- Promo Videos and more..!"
+            "iconUrl": "assets/services/dart.png",
+            "name": "Dart",
+            "description": "Programming with Dart\n- Modern syntax\n- Strong typing\n- Asynchronous programming\n- Great for Flutter development\n- Strong tooling support"
         },
         {
-            "icon": "assets/services/rapid.png",
-            "name": "Rapid Prototyping",
-            "description": "Rapid Prototype via Flutter\n- Working MVP\n- Quick & Working prototype"
+            "iconUrl": "assets/services/figma.png",
+            "name": "Figma",
+            "description": "UI/UX design with Figma\n- Interactive prototypes\n- Collaborative design\n- Vector graphics editor\n- User interface design\n- Cloud-based design tool"
         },
         {
-            "icon": "assets/services/blog.png",
-            "name": "Technical Blog Writing",
-            "description": "Technical Blog writing\n- Medium blogs\n- Soothing header images\n- SEO friendly\n- Researched topics and more..!"
+            "iconUrl": "assets/services/firebase.png",
+            "name": "Firebase",
+            "description": "Backend as a Service with Firebase\n- Real-time database\n- Authentication\n- Cloud storage\n- Hosting\n- Analytics"
         },
         {
-            "icon": "assets/services/open.png",
-            "name": "Open Source - GitHub",
-            "description": "Open source GitHub Projects\n- Awesome README.md\n- Well documented\n- Header images and more...!"
+            "iconUrl": "assets/services/android_studio.png",
+            "name": "Android Studio",
+            "description": "Android app development with Android Studio\n- Comprehensive IDE\n- Code editor\n- Emulator\n- Code templates\n- Performance profiling"
+        },
+        {
+            "iconUrl": "assets/services/vscode.png",
+            "name": "VSCode",
+            "description": "Code editing with VSCode\n- Lightweight and fast\n- Extensions marketplace\n- Integrated terminal\n- Debugging support\n- Git integration"
+        },
+        {
+            "iconUrl": "assets/services/git.png",
+            "name": "Git",
+            "description": "Version control with Git\n- Distributed version control system\n- Track changes\n- Branching and merging\n- Collaboration support\n- Efficient workflows"
+        },
+        {
+            "iconUrl": "assets/services/github.png",
+            "name": "GitHub",
+            "description": "Source code management with GitHub\n- Repository hosting\n- Collaboration tools\n- Issue tracking\n- Pull requests\n- Continuous integration"
         }
     ],
     "hireMe": {
-        "whatsapp": "923460159889"
+        "whatsapp": "6381812437"
     },
     "projects": [
         {
-            "title": "Awesome SnackBar",
-            "iconUrl": "https://drive.google.com/file/d/1EohcZdd5mg5dqHQIn24k_G0dpqQTFYwV/view?usp=sharing",
-            "bannerUrl": "assets/projects/medkitB.png",
-            "description": "A dart package including a wholesome experience of snackbar in your applications."
+            "title": "Unit Converter App",
+            "iconUrl": "assets/projects/uniticon.png",
+            "bannerUrl": "assets/projects/unit.png",
+            "description": "A simple and easy-to-use unit converter app developed using Flutter. Supports various unit conversions.",
+            "link": "https://github.com/Shanmugavelarumugam/Unit-Converter-App.git"
         },
         {
-            "title": "MedKit",
-            "iconUrl": "https://drive.google.com/file/d/1nr1FHUkACm5cg2MpXKNftUeKw888NcJt/view?usp=sharing",
-            "bannerUrl": "assets/projects/medkitB.png",
-            "description": "A Phramacy app developed using Flutter powered with Firebase as database with Doctor and Patient panels."
+            "title": "Todo App",
+            "iconUrl": "assets/projects/todoicon.png",
+            "bannerUrl": "assets/projects/todo.png",
+            "description": "A Todo app developed with Flutter to help manage tasks efficiently. Features task creation, editing, and deletion.",
+            "link": "https://github.com/Shanmugavelarumugam/ToDo-App.git"
         },
         {
-            "title": "The Holy Qur'an",
-            "iconUrl": "https://drive.google.com/file/d/1jpkSQyGZP5EWPCIfRz-dU9TARXHN2P5o/view?usp=sharing",
-            "bannerUrl": "assets/projects/quranB.png",
-            "description": "Application of Holy book of Muslims, Al-Qur'an. Developed using Flutter. Powered with live RestAPI given in README.md"
+            "title": "Login Screen",
+            "iconUrl": "assets/projects/introicon.png",
+            "bannerUrl": "assets/projects/intro.png",
+            "description": "A modern and secure login screen built with Flutter, including validation and user authentication.",
+            "link": "https://github.com/Shanmugavelarumugam/LoginPage.git"
         },
         {
-            "title": "Here I Am",
-            "iconUrl": "assets/projects/hereiam.png",
-            "bannerUrl": "assets/projects/hereiamB.png",
-            "description": "Here I am is an Alert app that Sends alert SMS holding your location (Address and Google Maps) to your loved ones."
+            "title": "Calculator App",
+            "iconUrl": "assets/projects/calicon.png",
+            "bannerUrl": "assets/projects/cal.png",
+            "description": "A fully functional calculator app developed using Flutter, capable of performing basic arithmetic operations.",
+            "link": "https://github.com/Shanmugavelarumugam/CalculatorApp.git"
         },
         {
-            "title": "COIVD 19 - Tracker",
-            "iconUrl": "assets/projects/covid.png",
-            "bannerUrl": "assets/projects/covidB.png",
-            "description": "A live trakcer for COVID19 stats across the Globe and my Home country Pakistan. It uses APIs so the data is live."
+            "title": "Weather App",
+            "iconUrl": "assets/projects/weaicon.png",
+            "bannerUrl": "assets/projects/weather.png",
+            "description": "A weather app that provides current weather information and forecasts. Built using Flutter and powered by a weather API.",
+            "link": "https://github.com/Shanmugavelarumugam/WeatherApp.git"
         },
         {
-            "title": "Messenger Chat Head UI",
-            "iconUrl": "assets/projects/messenger.png",
-            "bannerUrl": "",
-            "description": "Tried to clone the famous Chat Heads by Facebook Messenger using Flutter. Its basically in-app not exactly like the original chat head."
-        },
-        {
-            "title": "flutter.dev - Flutter Web",
-            "iconUrl": "assets/projects/flutter.png",
-            "bannerUrl": "",
-            "description": "Flutter Official Site clone using Flutter Web. Try the live site here. For the time being its not responsive fully so there might be responsiveness issues."
-        },
-        {
-            "title": "Earbender",
-            "iconUrl": "assets/projects/earbender.png",
-            "bannerUrl": "",
-            "description": "A concept of Music App developed using Flutter. Having functionality of playing Audio."
-        },
-        {
-            "title": "File Transfer Protocol",
-            "iconUrl": "assets/projects/java.png",
-            "bannerUrl": "",
-            "description": "A simple GUI based Java application that sends file from Client to Server but not the other way around."
-        },
-        {
-            "title": "My Order",
-            "iconUrl": "assets/projects/android.png",
-            "bannerUrl": "",
-            "description": "A concept app for self-services at various restaurants now a days. More like a Restaurant Ordering System."
-        },
-        {
-            "title": "Hidev",
-            "iconUrl": "assets/services/open.png",
-            "bannerUrl": "",
-            "description": "Its my end semester project. The whole design I developed here is an inspiration from my favortie Flutter Developer Marcin Szałek and his blog Fidev."
+            "title": "AeroTravel Login",
+            "iconUrl": "assets/projects/airicon.png",
+            "bannerUrl": "assets/projects/air.png",
+            "description": "A stylish and user-friendly travel flight booking login or home page developed with Flutter.",
+            "link": "https://github.com/Shanmugavelarumugam/Flights.git"
         }
     ],
     "contact": [
         {
             "param": "address",
-            "value": "Attock, Pakistan"
+            "value": "Chennai, Tamil Nadu, India"
         },
         {
             "param": "phone",
-            "value": "+92 346 0159889"
+            "value": "+91 6381812437"
         },
         {
             "param": "email",
-            "value": "hamza.6.shakeel@gmail.com"
+            "value": "ashanmugavel821@gmail.com"
         }
     ]
 }

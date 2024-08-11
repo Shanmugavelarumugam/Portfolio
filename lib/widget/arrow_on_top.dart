@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:folio/configs/app_theme.dart';
 import 'package:folio/provider/app_provider.dart';
 import 'package:folio/provider/scroll_provider.dart';
+
 import 'package:provider/provider.dart';
 
 class ArrowOnTop extends StatefulWidget {

@@ -58,6 +58,8 @@ class AppDimensions {
       app_ratio: $ratio
       ratio: $x
       pixels: ${UI.mediaQuery().devicePixelRatio}
+
+      
     """;
   }
 

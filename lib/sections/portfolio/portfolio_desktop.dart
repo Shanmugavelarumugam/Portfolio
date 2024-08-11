@@ -18,10 +18,20 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
   Widget build(BuildContext context) {
     return Container(
       padding: Space.h!,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.blue.shade300,
+            Colors.purple.shade400,
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
       child: Column(
         children: [
           const CustomSectionHeading(
-            text: "\nPortfolio",
+            text: "\nProjects",
           ),
           const CustomSectionSubHeading(
             text: "Here are few samples of my previous work :)\n\n",
@@ -50,9 +60,18 @@ class _PortfolioDesktopState extends State<PortfolioDesktop> {
             width: AppDimensions.normalize(50),
             child: OutlinedButton(
               onPressed: () => openURL(StaticUtils.gitHub),
+              style: OutlinedButton.styleFrom(
+                foregroundColor: Colors.amber,
+                side: BorderSide(
+                  color: Colors.amber, // Border color
+                  width: 2.0, // Border width
+                ), // Text color
+              ),
               child: Text(
                 'See More',
-                style: AppText.l1b,
+                style: AppText.l1b?.copyWith(
+                  color: Colors.amber, // Text color
+                ),
               ),
             ),
           )

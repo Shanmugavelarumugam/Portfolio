@@ -31,6 +31,7 @@ class EntranceFaderState extends State<EntranceFader>
     with SingleTickerProviderStateMixin {
   AnimationController? _controller;
   Animation? _dxAnimation;
+
   Animation? _dyAnimation;
 
   @override

@@ -2,14 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:folio/configs/configs.dart';
 import 'package:folio/constants.dart';
 import 'package:folio/utils/about_utils.dart';
-
 import 'package:folio/utils/utils.dart';
 import 'package:folio/utils/work_utils.dart';
-import 'package:folio/widget/about_me_data.dart';
 import 'package:folio/widget/community_button.dart';
 import 'package:folio/widget/custom_text_heading.dart';
-import 'package:folio/widget/tech_widget.dart';
-
 import 'package:universal_html/html.dart' as html;
 
 class AboutDesktop extends StatelessWidget {
@@ -18,155 +14,161 @@ class AboutDesktop extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
 
     return Container(
-      padding: Space.h,
-      child: Column(
-        children: [
-          const CustomSectionHeading(
-            text: '\nAbout Me',
-          ),
-          const CustomSectionSubHeading(
-            text: 'Get to know me :)',
-          ),
-          Space.y1!,
-          Row(
+      padding: const EdgeInsets.symmetric(vertical: 20.0),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.blue.shade300,
+            Colors.purple.shade400,
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+      ),
+      child: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 1200),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Expanded(
-                child: Image.asset(
-                  StaticUtils.coloredPhoto,
-                  height: height * 0.7,
-                ),
+              const CustomSectionHeading(
+                text: '\nAbout Me',
               ),
-              Expanded(
-                flex: width < 1230 ? 2 : 1,
-                child: Container(
-                  padding: EdgeInsets.only(left: width < 1230 ? 25.0 : 0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Who am I?',
-                        style: AppText.b1!.copyWith(
-                          color: AppTheme.c!.primary,
-                        ),
-                      ),
-                      Space.y1!,
-                      Text(
-                        AboutUtils.aboutMeHeadline,
-                        style: AppText.b1b!.copyWith(
-                          fontFamily: 'Montserrat',
-                        ),
-                      ),
-                      Space.y!,
-                      Text(
-                        AboutUtils.aboutMeDetail,
-                        style: AppText.b2!.copyWith(
-                          height: 2,
-                          letterSpacing: 1.1,
-                          fontFamily: 'Montserrat',
-                          fontSize: AppDimensions.normalize(5),
-                        ),
-                        textAlign: TextAlign.justify,
-                      ),
-                      Space.y!,
-                      Divider(
-                        color: Colors.grey[800],
-                        thickness: AppDimensions.normalize(0.5),
-                      ),
-                      Space.y!,
-                      Text(
-                        'Technologies I have worked with:',
-                        style: AppText.l1!.copyWith(
-                          color: AppTheme.c!.primary,
-                        ),
-                      ),
-                      Space.y!,
-                      Row(
-                        children: kTools
-                            .map((e) => ToolTechWidget(
-                                  techName: e,
-                                ))
-                            .toList(),
-                      ),
-                      Space.y!,
-                      Divider(
-                        color: Colors.grey[800],
-                        thickness: AppDimensions.normalize(0.5),
-                      ),
-                      Row(
-                        children: [
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              AboutMeData(
-                                data: "Name",
-                                information: "Muhammad Hamza",
-                              ),
-                              AboutMeData(
-                                data: "Age",
-                                information: "24",
-                              ),
-                            ],
-                          ),
-                          const Spacer(),
-                          Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: const [
-                              AboutMeData(
-                                data: "Email",
-                                information: "hamza.6.shakeel@gmail.com",
-                              ),
-                              AboutMeData(
-                                data: "From",
-                                information: "Attock, PK",
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Space.y1!,
-                      Row(
-                        children: [
-                          SizedBox(
-                            height: AppDimensions.normalize(13),
-                            width: AppDimensions.normalize(40),
-                            child: OutlinedButton(
-                              onPressed: () =>
-                                  html.window.open(StaticUtils.resume, 'pdf'),
-                              child: const Text(
-                                "Resume",
-                              ),
-                            ),
-                          ),
-                          Space.x1!,
-                          Container(
-                            color: Colors.grey[900]!,
-                            width: AppDimensions.normalize(30),
-                            height: AppDimensions.normalize(0.5),
-                          ),
-                          ...WorkUtils.logos.asMap().entries.map(
-                                (e) => Expanded(
-                                  child: CommunityIconBtn(
-                                    icon: e.value,
-                                    link: WorkUtils.communityLinks[e.key],
-                                    height:
-                                        WorkUtils.communityLogoHeight[e.key],
-                                  ),
-                                ),
-                              )
-                        ],
-                      ),
-                    ],
+              const CustomSectionSubHeading(
+                text: 'Get to know me :)',
+              ),
+              SizedBox(height: height * 0.05),
+              Text(
+                'Who am I?',
+                style: AppText.b1!.copyWith(
+                  color: AppTheme.c!.primary,
+                  fontSize: AppDimensions.normalize(8),
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: height * 0.02),
+              Text(
+                AboutUtils.aboutMeHeadline,
+                style: AppText.b1b!.copyWith(
+                  fontFamily: 'Montserrat',
+                  fontSize: AppDimensions.normalize(7),
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: height * 0.02),
+              Text(
+                AboutUtils.aboutMeDetail,
+                style: AppText.b2!.copyWith(
+                  height: 2,
+                  letterSpacing: 1.1,
+                  fontFamily: 'Montserrat',
+                  fontSize: AppDimensions.normalize(6),
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: height * 0.03),
+              Divider(
+                color: Colors.grey[800],
+                thickness: AppDimensions.normalize(0.5),
+              ),
+              SizedBox(height: height * 0.03),
+              Text(
+                'Experience',
+                style: AppText.l1!.copyWith(
+                  color: AppTheme.c!.primary,
+                  fontSize: AppDimensions.normalize(7),
+                ),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: height * 0.02),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  _buildExperienceItem(
+                    icon: Icons.star,
+                    text:
+                        'Flutter Developer Internship at MDQuality Apps Solutions',
                   ),
-                ),
+                  _buildExperienceItem(
+                    icon: Icons.star,
+                    text: 'Mobile App Developer Internship at Introvertish',
+                  ),
+                  _buildExperienceItem(
+                    icon: Icons.star,
+                    text:
+                        'Flutter Frontend Developer Internship at InternCareer',
+                  ),
+                ],
               ),
-              Container(
-                width: width < 1230 ? width * 0.05 : width * 0.1,
+              SizedBox(height: height * 0.03),
+              Divider(
+                color: Colors.grey[800],
+                thickness: AppDimensions.normalize(0.5),
+              ),
+              SizedBox(height: height * 0.03),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    height: AppDimensions.normalize(13),
+                    width: AppDimensions.normalize(40),
+                    child: OutlinedButton(
+                      onPressed: () =>
+                          html.window.open(StaticUtils.resume, 'pdf'),
+                      child: const Text("Resume"),
+                    ),
+                  ),
+                  SizedBox(width: AppDimensions.normalize(20)),
+                  Container(
+                    color: Colors.grey[900]!,
+                    width: AppDimensions.normalize(30),
+                    height: AppDimensions.normalize(0.5),
+                  ),
+                  SizedBox(width: AppDimensions.normalize(20)),
+                  ...WorkUtils.logos.asMap().entries.map(
+                        (e) => Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                          child: CommunityIconBtn(
+                            icon: e.value,
+                            link: WorkUtils.communityLinks[e.key],
+                            height: WorkUtils.communityLogoHeight[e.key],
+                          ),
+                        ),
+                      )
+                ],
               ),
             ],
-          )
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildExperienceItem({required IconData icon, required String text}) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 16.0),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Icon(
+            icon,
+            size: AppDimensions.normalize(8),
+            color: AppTheme.c!.primary,
+          ),
+          SizedBox(width: 8),
+          Text(
+            text,
+            style: AppText.b2!.copyWith(
+              height: 1.5,
+              letterSpacing: 1.1,
+              fontFamily: 'Montserrat',
+              fontSize: AppDimensions.normalize(6),
+            ),
+            textAlign: TextAlign.center,
+          ),
         ],
       ),
     );

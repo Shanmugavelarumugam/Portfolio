@@ -10,6 +10,7 @@ class SocialLinks extends StatelessWidget {
   const SocialLinks({
     Key? key,
   }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final appProvider = Provider.of<AppProvider>(context);
@@ -30,12 +31,12 @@ class SocialLinks extends StatelessWidget {
                   e.value,
                   color: appProvider.isDark ? Colors.white : Colors.black,
                   height: Responsive.isMobile(context)
-                      ? AppDimensions.normalize(10)
-                      : null,
+                      ? AppDimensions.normalize(100) // Reduced height
+                      : AppDimensions.normalize(22), // Reduced height
                 ),
                 iconSize: Responsive.isMobile(context)
-                    ? AppDimensions.normalize(10)
-                    : AppDimensions.normalize(15),
+                    ? AppDimensions.normalize(22) // Reduced icon size
+                    : AppDimensions.normalize(24), // Reduced icon size
                 onPressed: () => openURL(
                   StaticUtils.socialLinks[e.key],
                 ),

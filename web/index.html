@@ -2,21 +2,13 @@
 <html>
 
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    Fore more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-  -->
   <base href="/">
-  
+
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A Selft taught flutter developer, technical writer and open source contributor.">
+  <!-- Update the description here -->
+  <meta name="description"
+    content="A passionate Flutter developer with expertise in building cross-platform mobile applications. Dedicated to creating user-friendly and innovative solutions.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,7 +19,8 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png" />
 
-  <title>Hamza</title>
+  <!-- Update the title here -->
+  <title>Shanmugavel A</title>
   <link rel="manifest" href="manifest.json">
 
   <style>
@@ -86,8 +79,6 @@
 </head>
 
 <body>
-
-
   <div class="container">
     <div class="center">
       <div class="lds-ripple">
@@ -107,6 +98,25 @@
     }
   </script>
   <script src="main.dart.js" type="application/javascript"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCJbMfKgpW0YW5Ya1jmc2_s_BEh-xbZpYo",
+      authDomain: "flutter-web-c0739.firebaseapp.com",
+      projectId: "flutter-web-c0739",
+      storageBucket: "flutter-web-c0739.appspot.com",
+      messagingSenderId: "601685082903",
+      appId: "1:601685082903:web:c95442ee4528d63142ed52"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
 </body>
 
 </html>

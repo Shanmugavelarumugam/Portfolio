@@ -1,9 +1,8 @@
 name: folio
-description: Live portfolio developed in flutter 3.0.
+description: Live portfolio developed in Flutter 3.0.
 
-# The following line prevents the package from being accidentally published to
-# pub.dev using `pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+# Prevent package from being accidentally published to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
@@ -14,32 +13,37 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # github
+  # Version control for GitHub API
   github: ^9.2.0
 
-  # web related
-  flutter_html: any
+  # Web related packages
+
+  flutter_html: ^2.0.0
   url_strategy: ^0.2.0
   universal_html: ^2.0.4
 
-  # http
+  flutter_swiper_null_safety: ^1.0.0
+
+  # HTTP requests
   http: ^0.13.1
 
-  # utils
+  # Utility packagesSS
   mailto: ^2.0.0
   flip_card: ^0.6.0
-  url_launcher: ^6.1.2
+  url_launcher: ^6.0.20
+  carousel_slider: ^4.2.1
   cupertino_icons: ^1.0.2
-  carousel_slider: ^4.0.0
+  carousel_slider_plus: ^7.0.0
+  # UI/UX enhancements
   animated_text_kit: ^4.2.1
   font_awesome_flutter: ^10.1.0
+  firebase_core: ^1.6.0
 
-  # state management
+  # State management
   provider: ^6.0.1
 
-  # cache
+  # Local storage and caching
   shared_preferences: ^2.0.6
-
 
 dev_dependencies:
   flutter_test:
@@ -47,32 +51,29 @@ dev_dependencies:
 
   flutter_lints: ^2.0.0
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
-# The following section is specific to Flutter.
 flutter:
-
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
+  # Asset management
   assets:
     - assets/
-    - assets/work/
     - assets/photos/
+    - assets/work/
     - assets/services/
     - assets/projects/
-
+    - assets/hi.gif
     - data.json
 
+  # Font management
   fonts:
     - family: Agustina
       fonts:
         - asset: fonts/agustina/agustina.otf
-    
+
     - family: Montserrat
       fonts:
         - asset: fonts/montserrat/montserrat.ttf
-    
+
     - family: Poppins
       fonts:
         - asset: fonts/poppins/Poppins-Regular.ttf

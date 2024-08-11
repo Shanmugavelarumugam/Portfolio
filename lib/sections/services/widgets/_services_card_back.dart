@@ -6,6 +6,7 @@ class _ServiceCardBackWidget extends StatelessWidget {
       : super(key: key);
 
   final String serviceDesc;
+
   final String serviceTitle;
 
   @override

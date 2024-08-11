@@ -15,41 +15,39 @@ class StaticUtils {
   static const String blackWhitePhoto = 'assets/photos/black-white.png';
 
   // work
-  static const String dsc = 'assets/work/dsc.png';
-  static const String sastaticket = 'assets/work/st.png';
-  static const String university = 'assets/work/cui.png';
-  static const String fullterIsb = 'assets/work/flutterIsl.png';
+  static const String dsc = 'assets/work/st.png';
+  static const String university = 'assets/work/rec.png';
+  static const String fullterIsb = 'assets/work/mdquality.png';
 
   // services
-  static const String uiux = 'assets/services/ui.png';
-  static const String blog = 'assets/services/blog.png';
-  static const String appDev = 'assets/services/app.png';
-  static const String rapid = 'assets/services/rapid.png';
-  static const String openSource = 'assets/services/open.png';
-  static const String openSourceBlack = 'assets/services/open_b.png';
+  static const String dart = 'assets/services/nice.png';
+  static const String firebase = 'assets/services/firebase.png';
+  static const String flutter = 'assets/services/race.png';
+  static const String figma = 'assets/services/figma.png';
+  static const String andriodStudio = 'assets/services/good.png';
+  static const String andriodStudioBlack = 'assets/services/good.png';
+  static const String vscode = 'assets/services/vscode.png';
+  static const String git = 'assets/services/git.png';
+  static const String github = 'assets/services/github.png';
 
   static const List<String> socialIconURL = [
     "https://img.icons8.com/metro/208/ffffff/facebook-new--v2.png",
     "https://img.icons8.com/ios-glyphs/480/ffffff/instagram-new.png",
-    "https://img.icons8.com/android/480/ffffff/twitter.png",
     "https://img.icons8.com/metro/308/ffffff/linkedin.png",
-    "https://img.icons8.com/material-rounded/384/ffffff/github.png",
-    "https://img.icons8.com/ios-filled/500/ffffff/medium-monogram--v1.png"
+    "https://img.icons8.com/material-rounded/384/ffffff/github.png"
   ];
 
   static const List<String> socialLinks = [
-    "https://facebook.com/mhmzdev",
-    "https://instagram.com/mhmzdev",
-    "https://twitter.com/mhmzdev",
-    "https://linkedin.com/in/mhmzdev",
-    "https://github.com/mhmzdev",
-    "https://mhmzdev.medium.com"
+    "https://www.facebook.com/shanmugavel.a.5283?mibextid=ZbWKwL",
+    "https://www.instagram.com/hari_vishal_59?igsh=MXZ0dmljb3djZGN2dg==",
+    "https://www.linkedin.com/in/shanmugavel45?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "https://github.com/Shanmugavelarumugam"
   ];
 
   static const String resume =
-      'https://drive.google.com/file/d/1bDNNrkQtNVJbXcdwMSx0crQQvAF_nMwV/view?usp=sharing';
+      'https://drive.google.com/file/d/154Y1O8sLeCJPeHFBYENRG6xpGEa8mBxm/view?usp=drivesdk';
 
-  static const String gitHub = 'https://github.com/mhmzdev';
+  static const String gitHub = 'https://github.com/Shanmugavelarumugam';
 }
 
 class BodyUtils {
